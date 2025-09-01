@@ -1,4 +1,5 @@
-const express = require('express')
+require('dotenv').config();
+const express = require('express');
 const mongoose = require('mongoose');
 const Product = require("./models/product.model.js");
 const productRoute = require("./routes/product.route.js");
@@ -17,14 +18,13 @@ app.get('/', (req,res) => {
     res.send("Hello from Node API");
 });
 
-mongoose.connect('mongodb+srv://LuisAdrian:Luisanty1@cluster2.kg0ez2x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster2')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log('Connected to database')
-
+    console.log('Connected to database');
     app.listen(3000, () => {
-    console.log('Server is running on port 3000')
+      console.log('Server is running on port 3000');
     });
   })
   .catch(() => {
-    console.log('Connection failed')
+    console.log('Connection failed');
   });
