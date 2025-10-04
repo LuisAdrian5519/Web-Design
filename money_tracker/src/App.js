@@ -17,26 +17,29 @@ function App() {
         </button>
       </form>
       <div className='transactions'>
+
         <div className='transaction'>
           <div className='Left'>
             <div className='name'>New Samsung TV</div>
             <div className='description'>Time for a New TV</div>
           </div>
           <div className='Right'>
-            <div className='Price'>$500</div>
+            <div className='price red'>-$500</div>
             <div className='datetime'>2022-12-18 15:45</div>
           </div>
         </div>
+
         <div className='transaction'>
           <div className='Left'>
-            <div className='name'>New Samsung TV</div>
+            <div className='name'>Salary</div>
             <div className='description'>Time for a New TV</div>
           </div>
           <div className='Right'>
-            <div className='Price'>$500</div>
+            <div className='price green'>+$500</div>
             <div className='datetime'>2022-12-18 15:45</div>
           </div>
         </div>
+        
       </div>
     </main>
     
