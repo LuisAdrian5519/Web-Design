@@ -1,16 +1,34 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState('');
+  const [datetime, setDatetime] = useState('');
+  const [description, setDescription] = useState('');
+
+  function addNewtransaction(){
+    // Take all the states and send them to Backend
+    
+  }
   return (
     <main>
       <h1>$400<span>.00</span></h1>
-      <form>
+      <form onSubmit={addNewtransaction}>
         <div className='basics'>
-          <input type="text" placeholder={'+200 new samsung tv'}/>
-          <input type="datetime-local"/>
+          <input type="text"
+                value={name}
+                onChange={ev => setName(ev.target.value)}                 
+                placeholder={'+200 new samsung tv'}/>
+          
+          <input type="datetime-local"
+                value={datetime}
+                onChange={ev => setDatetime(ev.target.value)}/>
         </div>
         <div className='description'>
-          <input type="text" placeholder={'description'}/>
+          <input type="text"
+                value={description}
+                onChange={ev => setDescription(ev.target.value)}                 
+                placeholder={'description'}/>
         </div>
         <button type='submit'>
           Add new transaction
@@ -39,7 +57,7 @@ function App() {
             <div className='datetime'>2022-12-18 15:45</div>
           </div>
         </div>
-        
+
       </div>
     </main>
     
