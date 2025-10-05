@@ -6,8 +6,11 @@ function App() {
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
 
-  function addNewtransaction(){
+  function addNewtransaction(ev){
     // Take all the states and send them to Backend
+    ev.preventDefault();
+    const url = process.env.REACT_APP_API_URL;
+    console.log(url);
     
   }
   return (
