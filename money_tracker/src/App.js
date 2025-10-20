@@ -9,10 +9,23 @@ function App() {
   function addNewtransaction(ev){
     // Take all the states and send them to Backend
     ev.preventDefault();
-    const url = process.env.REACT_APP_API_URL;
-    console.log(url);
-    
-  }
+    const url = process.env.REACT_APP_API_URL+'/transaction';
+    fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, description, datetime })
+  })
+  .then(response => response.json())
+  .then(json => {
+    console.log('result', json);
+    // reset fields after success
+    setName('');
+    setDescription('');
+    setDatetime('');
+  })
+  .catch(err => console.error('Error posting transaction:', err));
+}
+  
   return (
     <main>
       <h1>$400<span>.00</span></h1>
