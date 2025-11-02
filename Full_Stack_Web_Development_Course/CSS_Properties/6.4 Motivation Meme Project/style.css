@@ -1,0 +1,32 @@
+
+    .Poster {
+        background-color: black;
+        width: 100%;         /* contenedor centrado*/
+        margin: 0 auto;     /* centra el div horizontalmente */
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center; /* centra el texto dentro */
+    }
+    
+    .motivation-img {
+        display: block;
+        width: 100%;        /* llena el ancho del contenedor .Poster */
+        max-width: 400px;   /* opcional: evita que crezca demasiado en pantallas grandes */
+        height: auto;
+        margin: 0 auto;     /* centra si usas un max-width menor que el contenedor */
+        border: 5px solid white; /* requisito: borde blanco de 5px */
+        box-sizing: border-box;
+    }
+
+    #Meme {
+    font-family: "Libre Baskerville", serif;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase; /* opcional según requisito */
+    }
+
+    p{
+      width: 50%;
+      margin-left: 25%;
+      color:red
+    }
