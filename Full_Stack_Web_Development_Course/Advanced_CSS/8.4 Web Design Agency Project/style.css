@@ -14,8 +14,42 @@ h1 {
   font-size: 5rem;
 }
 
+.highlight {
+  color: midnightblue; /* color que prefieras */
+  font-weight: 700; /* opcional */
+}
+
+img {
+  width:400px;
+  height:auto;
+}
+
 footer {
   text-align: right;
   color: midnightblue;
 }
 
+@media (max-width: 680px) {
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .card img {
+    margin-bottom: 10px;
+    width: 100%;
+    display: inline;
+    object-fit: cover;
+  }
+}
